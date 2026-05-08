@@ -1,0 +1,93 @@
+:root {
+    --cor-fundo: #000000;
+    --cor-primaria: #00f2ff; /* Ciano brilhante */
+    --cor-texto: #ffffff;
+    --cor-secundaria: #afafaf;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    gap: 40px;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.destaque {
+    color: var(--cor-primaria);
+}
+
+.descricao {
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+    margin: 20px 0;
+    max-width: 500px;
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn-cyan {
+    background-color: var(--cor-primaria);
+    color: #000;
+}
+
+.btn-cyan:hover {
+    box-shadow: 0 0 15px var(--cor-primaria);
+    transform: scale(1.05);
+}
+
+.btn-outline {
+    border: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+}
+
+.btn-outline:hover {
+    background-color: var(--cor-primaria);
+    color: #000;
+}
+
+.perfil-img {
+    width: 350px;
+    border-radius: 15px;
+    border: 2px solid var(--cor-primaria);
+    box-shadow: -10px 10px 0px var(--cor-primaria);
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .perfil-img {
+        width: 250px;
+    }
+}
